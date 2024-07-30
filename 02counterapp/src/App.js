@@ -6,11 +6,19 @@ function App() {
   const [Counter,setCounter] = useState(15)
   
   const addValue = () => {
-    setCounter(Counter+1)
+    if(Counter < 20){
+      setCounter(Counter+1)
+    }
+    else
+       alert("Counter can't be more than 20!")
     console.log(Counter)
   }
   const subtractValue = () => {
-    setCounter(Counter - 1)
+    if(Counter > 0){
+      setCounter(Counter-1)
+    }
+    else
+    alert("Counter can't be negative!")
     console.log(Counter)
   }
 
